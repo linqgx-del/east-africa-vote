@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2027 东非大迁徙 7人团队路线投票</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        savanna: {
+                            50: '#fdfbf7',
+                            100: '#f7f2e8',
+                            200: '#eee3cb',
+                            500: '#c69214',
+                            600: '#ad7710',
+                            800: '#63420d',
+                            900: '#3d2807',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-savanna-50 text-stone-800 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Hero Header -->
+    <header class="relative bg-stone-900 text-white py-12 px-4 sm:px-6 lg:px-8 shadow-xl overflow-hidden">
+        <div class="absolute inset-0 opacity-40 mix-blend-overlay">
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=2000&q=80" alt="Savanna background" class="w-full h-full object-cover">
+        </div>
+        <div class="relative max-w-6xl mx-auto text-center space-y-4">
+            <div class="inline-flex items-center gap-2 bg-savanna-500/20 border border-savanna-500/40 text-savanna-200 px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide backdrop-blur-md">
+                <i class="fa-solid fa-compass"></i> 2027年8月1日出发 · 7人团队实时决策
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-amber-100">
+                东非大迁徙 4 大路线终极决选
+            </h1>
+            <p class="max-w-2xl mx-auto text-stone-300 text-base sm:text-lg">
+                云端实时同步投票与留言，全员随时随地查看最新进展！
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <!-- Routes Section -->
+        <section class="space-y-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-200 pb-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-stone-900 flex items-center gap-2">
+                        <i class="fa-solid fa-route text-savanna-500"></i> 备选路线详述
+                    </h2>
+                    <p class="text-stone-500 text-sm mt-1">点击下方按钮投票，数据将实时更新至云端</p>
+                </div>
+                <button onclick="fetchCloudData()" class="self-start sm:self-auto text-xs text-amber-700 hover:text-amber-900 border border-amber-300 hover:border-amber-500 bg-amber-50 px-3 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 shadow-sm">
+                    <i class="fa-solid fa-rotate"></i> 手动刷新最新票数
+                </button>
+            </div>
+
+            <!-- Route Cards Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- 方案一 -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col overflow-hidden group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1000&q=80" alt="Moshi relaxation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-amber-500 text-white font-bold text-xs px-3 py-1 rounded-full uppercase">方案一</div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <h3 class="text-xl font-bold leading-tight">坦桑 Safari + 莫西小镇慢生活</h3>
+                            <p class="text-stone-300 text-xs mt-1"><i class="fa-regular fa-clock"></i> 莫西连住2晚 · D11晚或D12晚弹性飞回</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-stone-400"><i class="fa-solid fa-map-location-dot text-savanna-500"></i> 地图路线轨迹</h4>
+                            <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-100 text-xs text-stone-700 leading-relaxed font-medium">
+                                <span class="font-bold">JRO机场</span> ➔ 阿鲁沙 ➔ 塔兰吉雷 ➔ 恩戈罗 ➔ 塞伦盖蒂中部 ➔ <span class="bg-amber-100 text-amber-900 px-1 rounded">北塞(2晚)</span> ➔ 莫西小镇(连住2晚) ➔ JRO返程
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+                            <div class="text-xs text-stone-500"><span class="font-bold text-stone-800 text-base" id="count-opt1">0</span> 票 (<span id="percent-opt1">0%</span>)</div>
+                            <button onclick="castVote('opt1')" class="bg-stone-900 hover:bg-savanna-600 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition-colors shadow-sm flex items-center gap-2">
+                                <i class="fa-solid fa-vote-yea"></i> 选择方案一
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 方案二 -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col overflow-hidden group">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=80" alt="Cross-border Mara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                        <div class="absolute top-4 left-4 bg-amber-500 text-white font-bold text-xs px-3 py-1 rounded-full uppercase">方案二</div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <h3 class="text-xl font-bold leading-tight">安博塞利雪山 + 坦桑大迁徙 + 肯尼亚跨国</h3>
+                            <p class="text-stone-300 text-xs mt-1"><i class="fa-regular fa-clock"></i> 跨国全景 · D12晚或D13早弹性飞回</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-6">
+                        <div class="space-y-3">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-stone-400"><i class="fa-solid fa-map-location-dot text-savanna-500"></i> 地图路线轨迹</h4>
+                            <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-100 text-xs text-stone-700 leading-relaxed font-medium">
+                                <span class="font-bold">NBO内罗毕</span> ➔ 安博塞利 ➔ 阿鲁沙 ➔ 恩戈罗 ➔ <span class="bg-amber-100 text-amber-900 px-1 rounded">北
