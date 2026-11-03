@@ -90,6 +90,43 @@
                             <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-100 text-xs text-stone-700 leading-relaxed font-medium">
                                 <span class="font-bold">JRO机场</span> ➔ 阿鲁沙 ➔ 塔兰吉雷 ➔ 恩戈罗 ➔ 塞伦盖蒂中部 ➔ <span class="bg-amber-100 text-amber-900 px-1 rounded">北塞(2晚)</span> ➔ 莫西小镇(连住2晚) ➔ JRO返程
                             </div>
+                        <div class="mt-4">
+                            <button type="button" onclick="toggleItinerary('itinerary-opt1', this)" aria-expanded="false" class="w-full flex items-center justify-between gap-3 text-xs font-semibold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-4 py-3 rounded-xl transition-colors">
+                                <span><i class="fa-solid fa-calendar-days mr-2"></i>点击展开每日行程细节</span>
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div id="itinerary-opt1" hidden class="mt-2 bg-white border border-stone-200 rounded-xl px-4 divide-y divide-stone-100">
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D1｜抵达乞力马扎罗 JRO · 阿鲁沙</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">接机后前往阿鲁沙，入住并休息；根据航班时间安排轻松活动。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D2｜塔兰吉雷国家公园</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">进入塔兰吉雷 Safari，寻找象群、 baobab 树及草原动物，傍晚返回营地/旅馆。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D3｜恩戈罗保护区</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">前往恩戈罗区域，沿途欣赏高地景观；可安排火山口周边或保护区内住宿。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D4–D5｜塞伦盖蒂中部</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">在塞伦盖蒂中部进行多次游戏驱车，追踪狮子、猎豹及其他草原动物。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D6–D7｜北塞伦盖蒂（2晚）</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">重点关注大迁徙兽群与马拉河周边活动；具体过河情况取决于当时兽群位置和天气。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D8–D9｜莫西小镇（连住2晚）</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">从 Safari 区域返回莫西，安排休整、洗衣、咖啡体验或远眺乞力马扎罗。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D10–D11｜返程弹性</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">按机票安排前往 JRO；可选择 D11 晚或 D12 晚航班，预留转场缓冲。</p>
+                                    </div>
+                                <p class="text-[11px] text-stone-400 py-3 leading-relaxed">以上为路线示意，实际行程、住宿、交通及动物迁徙位置请以旅行社确认方案为准。</p>
+                            </div>
+                        </div>
                         </div>
                         <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
                             <div class="text-xs text-stone-500"><span class="font-bold text-stone-800 text-base" id="count-opt1">0</span> 票 (<span id="percent-opt1">0%</span>)</div>
@@ -117,6 +154,51 @@
                             <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-100 text-xs text-stone-700 leading-relaxed font-medium">
                                 <span class="font-bold">NBO内罗毕</span> ➔ 安博塞利 ➔ 阿鲁沙 ➔ 恩戈罗 ➔ <span class="bg-amber-100 text-amber-900 px-1 rounded">北塞(3晚)</span> ➔ Isebania口岸 ➔ 马赛马拉 ➔ 新月岛 ➔ 内罗毕返程
                             </div>
+                        <div class="mt-4">
+                            <button type="button" onclick="toggleItinerary('itinerary-opt2', this)" aria-expanded="false" class="w-full flex items-center justify-between gap-3 text-xs font-semibold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-4 py-3 rounded-xl transition-colors">
+                                <span><i class="fa-solid fa-calendar-days mr-2"></i>点击展开每日行程细节</span>
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div id="itinerary-opt2" hidden class="mt-2 bg-white border border-stone-200 rounded-xl px-4 divide-y divide-stone-100">
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D1｜抵达内罗毕 NBO · 安博塞利</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">抵达后前往安博塞利，天气晴朗时可欣赏乞力马扎罗山景。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D2｜安博塞利国家公园</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">安排全天 Safari，重点观察象群与雪山背景；夜宿安博塞利周边。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D3｜跨境前往阿鲁沙</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">经边境及交通衔接进入坦桑尼亚，前往阿鲁沙休整。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D4｜恩戈罗保护区</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">前往恩戈罗区域，安排景观与野生动物体验。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D5–D7｜北塞伦盖蒂（3晚）</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">留出较多时间在北塞伦盖蒂追踪迁徙兽群，关注马拉河周边动态。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D8｜Isebania 口岸跨境</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">从坦桑尼亚进入肯尼亚，需确认车辆、导游及边境手续安排。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D9–D10｜马赛马拉国家保护区</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">安排游戏驱车寻找大型猫科动物及迁徙兽群；住宿位置影响每日进园时间。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D11｜新月岛 / 内罗毕</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">可安排新月岛步行体验（以实际开放与预订为准），之后前往内罗毕。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D12–D13｜返程弹性</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">按国际航班安排从内罗毕返程，建议预留跨境及陆路交通缓冲。</p>
+                                    </div>
+                                <p class="text-[11px] text-stone-400 py-3 leading-relaxed">以上为路线示意，实际行程、住宿、交通及动物迁徙位置请以旅行社确认方案为准。</p>
+                            </div>
+                        </div>
                         </div>
                         <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
                             <div class="text-xs text-stone-500"><span class="font-bold text-stone-800 text-base" id="count-opt2">0</span> 票 (<span id="percent-opt2">0%</span>)</div>
@@ -144,6 +226,43 @@
                             <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-100 text-xs text-stone-700 leading-relaxed font-medium">
                                 <span class="font-bold">JRO落地</span> ➔ 塔兰吉雷 ➔ 恩戈罗 ➔ 塞伦盖蒂中部 ➔ <span class="bg-amber-100 text-amber-900 px-1 rounded">北塞(死守3晚)</span> ➔ 桑给巴尔岛(ZNZ) ➔ 桑岛直飞返程
                             </div>
+                        <div class="mt-4">
+                            <button type="button" onclick="toggleItinerary('itinerary-opt3', this)" aria-expanded="false" class="w-full flex items-center justify-between gap-3 text-xs font-semibold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-4 py-3 rounded-xl transition-colors">
+                                <span><i class="fa-solid fa-calendar-days mr-2"></i>点击展开每日行程细节</span>
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div id="itinerary-opt3" hidden class="mt-2 bg-white border border-stone-200 rounded-xl px-4 divide-y divide-stone-100">
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D1｜抵达 JRO · 塔兰吉雷</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">接机后前往塔兰吉雷，安排首日 Safari。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D2｜恩戈罗区域</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">前往恩戈罗区域，欣赏高地景观并安排野生动物体验。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D3｜塞伦盖蒂中部</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">进入塞伦盖蒂中部，开始追踪迁徙与草原动物。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D4–D6｜北塞伦盖蒂（连续3晚）</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">尽量减少长距离转场，集中在北塞伦盖蒂活动；兽群及河渡情况无法提前保证。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D7｜前往桑给巴尔岛 ZNZ</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">根据航班安排从 Safari 区域前往机场，飞往桑给巴尔岛。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D8–D10｜桑给巴尔海岛度假</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">安排海滩休闲、海上活动或石头城游览；活动可根据团队兴趣选择。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D11–D12｜桑岛返程</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">从 ZNZ 直接返程或经其他枢纽转机，需以实际航班为准。</p>
+                                    </div>
+                                <p class="text-[11px] text-stone-400 py-3 leading-relaxed">以上为路线示意，实际行程、住宿、交通及动物迁徙位置请以旅行社确认方案为准。</p>
+                            </div>
+                        </div>
                         </div>
                         <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
                             <div class="text-xs text-stone-500"><span class="font-bold text-stone-800 text-base" id="count-opt3">0</span> 票 (<span id="percent-opt3">0%</span>)</div>
@@ -171,6 +290,47 @@
                             <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-100 text-xs text-stone-700 leading-relaxed font-medium">
                                 <span class="font-bold">JRO落地</span> ➔ 乞力马扎罗(Marangu路线) ➔ 塔兰吉雷 ➔ 恩戈罗 ➔ <span class="bg-amber-100 text-amber-900 px-1 rounded">北塞(2晚)</span> ➔ 阿鲁沙休整 ➔ JRO返程
                             </div>
+                        <div class="mt-4">
+                            <button type="button" onclick="toggleItinerary('itinerary-opt4', this)" aria-expanded="false" class="w-full flex items-center justify-between gap-3 text-xs font-semibold text-amber-800 bg-amber-50 hover:bg-amber-100 border border-amber-200 px-4 py-3 rounded-xl transition-colors">
+                                <span><i class="fa-solid fa-calendar-days mr-2"></i>点击展开每日行程细节</span>
+                                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                            </button>
+                            <div id="itinerary-opt4" hidden class="mt-2 bg-white border border-stone-200 rounded-xl px-4 divide-y divide-stone-100">
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D1｜抵达 JRO · 登山准备</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">前往登山集合点，检查装备并听取向导说明。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D2–D6｜乞力马扎罗 Marangu 路线</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">按登山团队安排逐日上升、适应海拔并冲顶；具体天数、营地和节奏需由专业运营方确认。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D7｜下撤与恢复</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">下撤后返回住宿点，休息并评估身体状态。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D8｜塔兰吉雷国家公园</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">开始 Safari 行程，安排塔兰吉雷游戏驱车。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D9｜恩戈罗区域</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">前往恩戈罗区域，体验火山口及周边野生动物。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D10–D11｜北塞伦盖蒂（2晚）</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">在北塞伦盖蒂安排 Safari，关注迁徙兽群活动。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D12｜阿鲁沙休整</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">返回阿鲁沙，作为登山与 Safari 后的恢复和返程缓冲日。</p>
+                                    </div>
+                                    <div class="border-b border-stone-100 last:border-0 py-3">
+                                        <div class="font-semibold text-stone-800 text-xs">D12晚 / D13早｜JRO 返程</div>
+                                        <p class="text-xs text-stone-600 mt-1 leading-relaxed">根据国际航班选择返程时间；请与旅行社确认登山结束日期和航班衔接。</p>
+                                    </div>
+                                <p class="text-[11px] text-stone-400 py-3 leading-relaxed">以上为路线示意，实际行程、住宿、交通及动物迁徙位置请以旅行社确认方案为准。</p>
+                            </div>
+                        </div>
                         </div>
                         <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
                             <div class="text-xs text-stone-500"><span class="font-bold text-stone-800 text-base" id="count-opt4">0</span> 票 (<span id="percent-opt4">0%</span>)</div>
@@ -242,6 +402,19 @@
         const API_URL = "https://api.npoint.io/7d22f6aad2ec9cdc89e8";
 
         let cloudData = { votes: { opt1: 0, opt2: 0, opt3: 0, opt4: 0 }, comments: [] };
+
+        // 展开/收起每个方案的每日行程细节
+        function toggleItinerary(panelId, button) {
+            const panel = document.getElementById(panelId);
+            const isOpening = panel.hidden;
+            panel.hidden = !isOpening;
+            button.setAttribute('aria-expanded', String(isOpening));
+            const icon = button.querySelector('.fa-chevron-down');
+            if (icon) icon.classList.toggle('rotate-180', isOpening);
+            button.querySelector('span').innerHTML = isOpening
+                ? '<i class="fa-solid fa-calendar-days mr-2"></i>收起每日行程细节'
+                : '<i class="fa-solid fa-calendar-days mr-2"></i>点击展开每日行程细节';
+        }
 
         // 从云端拉取最新数据
         async function fetchCloudData() {
